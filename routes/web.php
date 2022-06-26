@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\SSOBrokerController;
+// use App\Http\Controllers\SSOBrokerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,21 +14,21 @@ use App\Http\Controllers\SSOBrokerController;
 |
 */
 
-Route::get('backend/login', [SSOBrokerController::class, 'authenticateToSSO']);
-Route::get('authenticateToSSO', [SSOBrokerController::class, 'authenticateToSSO']);
-Route::get('authData/{authData}', [SSOBrokerController::class, 'authenticateToSSO']);
-Route::get('logout/{sessionId}', [SSOBrokerController::class, 'logout']);
-Route::get('logout', [SSOBrokerController::class, 'logout']);
-Route::get('changeRole/{role}', [SSOBrokerController::class, 'changeRole'])->name('changeRole');
+// Route::get('backend/login', [SSOBrokerController::class, 'authenticateToSSO']);
+// Route::get('authenticateToSSO', [SSOBrokerController::class, 'authenticateToSSO']);
+// Route::get('authData/{authData}', [SSOBrokerController::class, 'authenticateToSSO']);
+// Route::get('logout/{sessionId}', [SSOBrokerController::class, 'logout']);
+// Route::get('logout', [SSOBrokerController::class, 'logout']);
+// Route::get('changeRole/{role}', [SSOBrokerController::class, 'changeRole'])->name('changeRole');
 
-Route::group(['middleware' => ['SSOBrokerMiddleware']], function () {
-    Route::get('test', function(){
-       return 'test';   
-    });
-    Route::get('/backend', function () {
-        return view('backend.welcome');
-    });
-});
+// Route::group(['middleware' => ['SSOBrokerMiddleware']], function () {
+//     Route::get('test', function(){
+//        return 'test';   
+//     });
+//     Route::get('/backend', function () {
+//         return view('backend.welcome');
+//     });
+// });
 
 // landing 
 
